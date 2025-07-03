@@ -2,19 +2,22 @@
 <html>
 <head>
     <title>Login</title>
+    <link rel="stylesheet" href="assets/login-style.css">
 </head>
 <body>
-    <h2>User Login</h2>
-    <form action="actions/login_action.php" method="POST">
-        <label>Email:</label><br>
-        <input type="email" name="email" required><br><br>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form action="actions/login_action.php" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
 
-        <label>Password:</label><br>
-        <input type="password" name="password" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
 
-        <input type="submit" value="Login">
-    </form>
+            <input type="submit" value="Login">
+        </form>
 
-    <p>Don't have an account? <a href="users/register.php">Register here</a></p>
+        <p style="text-align:center; margin-top: 15px;">Don't have an account? <a href="users/register.php">Register here</a></p>
+    </div>
 </body>
 </html>
