@@ -9,17 +9,17 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Step 2: Get prescription_id from URL
-if (!isset($_GET['prescription_id'])) {
+if (!isset($_GET['id'])) {
     echo "Prescription ID not provided.";
     exit();
 }
 
-$prescription_id = $_GET['prescription_id'];
+$id = $_GET['id'];
 
 // Step 3: Fetch quotation for the prescription
-$quotation_sql = "SELECT * FROM quotations WHERE prescription_id = ?";
+$quotation_sql = "SELECT * FROM quotations WHERE id = ?";
 $stmt = $conn->prepare($quotation_sql);
-$stmt->bind_param("i", $prescription_id);
+$stmt->bind_param("i", $id);
 $stmt->execute();
 $quotation_result = $stmt->get_result();
 
@@ -43,41 +43,69 @@ $items_result = $items_stmt->get_result();
 <html>
 <head>
     <title>View Quotation</title>
-    <link rel="stylesheet" href="../assets/style.css"> <!-- Optional: for styling -->
+    <link rel="stylesheet" href="../assets/view_quotation.css?v=<?php echo time(); ?>">
+
 </head>
 <body>
-    <h2>Quotation Details</h2>
-    <p><strong>Total Amount:</strong> Rs. <?= number_format($quotation['total'], 2) ?></p>
-    <p><strong>Status:</strong> <?= ucfirst($quotation['status']) ?></p>
+    <header>
+        <h1>Medical Prescription Upload System</h1>
+        <p>Simple, Secure & Fast Prescription Management</p>
+    </header>
 
-    <h3>Drug List</h3>
-    <table border="1" cellpadding="10" cellspacing="0">
-        <tr>
-            <th>Drug</th>
-            <th>Quantity</th>
-            <th>Unit Price</th>
-            <th>Subtotal</th>
-        </tr>
-        <?php while ($item = $items_result->fetch_assoc()): ?>
-        <tr>
-            <td><?= htmlspecialchars($item['drug']) ?></td>
-            <td><?= $item['quantity'] ?></td>
-            <td>Rs. <?= number_format($item['unit_price'], 2) ?></td>
-            <td>Rs. <?= number_format($item['quantity'] * $item['unit_price'], 2) ?></td>
-        </tr>
-        <?php endwhile; ?>
-    </table>
+    <nav>
+        <a href="../users/register.php">Register</a>
+        <a href="../index.php">Login</a>
+        <a href="#company">Company</a>
+        <a href="#contact">Contact</a>
+        <a href="../homepage.php">Home Page</a>
+    </nav>
+</main>
+    <div class="container">
+        <h2>Quotation Details</h2>
+        <div class="quote-info">
+            <p><strong>Total Amount:</strong> Rs. <?= number_format($quotation['total'], 2) ?></p>
+            <p><strong>Status:</strong> <?= ucfirst($quotation['status']) ?></p>
+        </div>
 
-    <?php if ($quotation['status'] == 'pending'): ?>
-        <form action="../actions/respond_quotation.php" method="post">
+        <h3>Drug List</h3>
+        <table class="drug-table">
+            <thead>
+                <tr>
+                    <th>Drug</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while ($item = $items_result->fetch_assoc()): ?>
+                <tr>
+                    <td><?= htmlspecialchars($item['drug']) ?></td>
+                    <td><?= $item['quantity'] ?></td>
+                    <td>Rs. <?= number_format($item['unit_price'], 2) ?></td>
+                    <td>Rs. <?= number_format($item['quantity'] * $item['unit_price'], 2) ?></td>
+                </tr>
+                <?php endwhile; ?>
+            </tbody>
+        </table>
+
+        <?php if ($quotation['status'] == 'pending'): ?>
+        <form action="../actions/respond_quotation.php" method="post" class="response-form">
             <input type="hidden" name="quotation_id" value="<?= $quotation_id ?>">
-            <button type="submit" name="response" value="accepted">Accept</button>
-            <button type="submit" name="response" value="rejected">Reject</button>
+            <button type="submit" name="response" value="accepted" class="accept-btn">Accept</button>
+            <button type="submit" name="response" value="rejected" class="reject-btn">Reject</button>
         </form>
-    <?php else: ?>
-        <p><strong>This quotation has been <?= $quotation['status'] ?>.</strong></p>
-    <?php endif; ?>
+        <?php else: ?>
+            <p class="status-message"><strong>This quotation has been <?= $quotation['status'] ?>.</strong></p>
+        <?php endif; ?>
 
-    <br><a href="dashboard.php">⬅ Back to Dashboard</a>
+        <a href="dashboard.php" class="back-btn">⬅ Back to Dashboard</a>
+    </div>
+    </main>
+<footer>
+     &copy; 2025 MediConnect Pvt Ltd. All rights reserved.
+</footer>
+
 </body>
+
 </html>

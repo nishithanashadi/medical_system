@@ -1,15 +1,84 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url('../assets/register\ background.avif') no-repeat center center fixed;
+    background: url('../assets/home\ 4.webp') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
-    padding: 40px 0;
+    padding: 0;
+    background-color: #f0f0f5;
+    color: #222;
+}
+
+.site-header {
+    background-color: #2b6777;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header-text {
+    flex: 1;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 1rem;
+    margin: 5px 0 0;
+    font-style: italic;
+}
+.logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid white;
+    margin-left: auto;
+}
+
+
+header {
+    background-color: #2b6777;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+nav {
+    background-color: #c8d8e4;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 140px;
+    width: 100%;
+   
+}
+
+nav a {
+    text-decoration: none;
+    color: #2b6777;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    box-sizing: border-box;
+    padding: 40px 20px;
+ text-decoration: underline;
 }
+
+
 
 .form-container {
     background: white;
@@ -93,4 +162,15 @@ input[type="submit"]:hover {
 /* Add spacing between fields */
 br + br {
     margin-bottom: 10px;
+}
+
+
+footer {
+    background-color: #2b6777;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }

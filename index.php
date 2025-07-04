@@ -2,9 +2,25 @@
 <html>
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="assets/login-style.css">
+    <link rel="stylesheet" href="assets/loginstyle.css">
+     
 </head>
 <body>
+    <div>
+    <header>
+        <h1>Medical Prescription Upload System</h1>
+        <p>Simple, Ssecure & Fast Prescription Management</p>
+    </header>
+    
+    <nav>
+        <a href="users/register.php">Register</a>
+        <a href="index.php">Login</a>
+        <a href="#company">Company</a>
+        <a href="#contact">Contact</a>
+        <a href="homepage.php">Home Page</a>
+    </nav>
+    </div>
+    <main>
     <div class="form-container">
         <h2>Login</h2>
         <form action="actions/login_action.php" method="POST">
@@ -19,5 +35,9 @@
 
         <p style="text-align:center; margin-top: 15px;">Don't have an account? <a href="users/register.php">Register here</a></p>
     </div>
+    </main>
+    <footer>
+        &copy; 2025 MediConnect Pvt Ltd. All rights reserved.
+    </footer>
 </body>
 </html>

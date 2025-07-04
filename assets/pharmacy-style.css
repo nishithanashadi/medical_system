@@ -1,0 +1,176 @@
+/* Ensure basic reset */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Background container */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../assets/img2.webp') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(6px); /* Blur the background */
+    opacity: 0.7;       /* Optional: make it slightly transparent */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #2b6777;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    border-radius: 5px;
+}
+
+.logout-btn {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    color: #fff;
+    background-color: #c94c4c;
+    padding: 8px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.logout-btn:hover {
+    background-color: #a33a3a;
+}
+
+section h2 {
+    margin-top: 30px;
+    color: #333;
+}
+
+.prescription-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.prescription-box .info p {
+    margin: 6px 0;
+}
+
+.image-container {
+    margin-top: 10px;
+}
+
+.image-container img {
+    max-width: 120px;
+    margin: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.quote {
+    margin-top: 15px;
+}
+
+.quote .quote-btn {
+    background-color: #2b6777;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+.quote .quote-btn:hover {
+    background-color: #1e4f5f;
+}
+
+.status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+.status.accepted {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.status.rejected {
+    background-color: #f44336;
+    color: white;
+}
+
+.status.pending {
+    background-color: #ff9800;
+    color: white;
+}
+
+
+header {
+    background-color: #2b6777;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+
+nav {
+    background-color: #c8d8e4;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 140px;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2b6777;
+    font-weight: bold;
+    width: 100%;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+ text-decoration: underline;
+}
+
+
+
+
+
+footer {
+    background-color: #2b6777;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+

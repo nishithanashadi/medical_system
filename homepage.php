@@ -1,63 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Medical Prescription System - Home</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f5;
-        }
-        header {
-            background-color: #2b6777;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #c8d8e4;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #2b6777;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding: 20px;
-        }
-        section {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        footer {
-            background-color: #2b6777;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/home.css" />
 </head>
 <body>
-    <header>
+    <header class="site-header">
+        <div class="header-text">
         <h1>Medical Prescription Upload System</h1>
-        <p>Simple, Secure & Fast Prescription Management</p>
+        <p>Simple, Ssecure & Fast Prescription Management</p>
+         </div>
+        <img src="assets/logo.jpg" alt="Logo" class="logo-img">
     </header>
 
     <nav>
@@ -65,32 +20,62 @@
         <a href="index.php">Login</a>
         <a href="#company">Company</a>
         <a href="#contact">Contact</a>
+        <a href="homepage.php">Home Page</a>
+
     </nav>
 
-    <main>
-        <section id="welcome">
+    <!-- Blurred Image with Welcome Text -->
+    <section id="image-section">
+        <div class="background-image"></div>
+        <div id="welcome-text">
             <h2>Welcome to Our Platform</h2>
-            <p>This system allows users to upload prescriptions and pharmacies to respond with quotations. It's a fast and convenient way to get your medical needs handled online.</p>
-        </section>
+            <p>This system allows users to upload prescriptions and pharmacies to respond with quotations.<br>
+            It's a fast and convenient way to get your medical needs handled online.</p>
+        </div>
+    </section>
 
-        <section id="company">
-            <h2>Company Overview</h2>
-            <p><strong>Company Name:</strong> MediConnect Pvt Ltd</p>
-            <p><strong>Mission:</strong> To streamline the prescription handling process digitally between users and pharmacies.</p>
-            <p><strong>Founded:</strong> 2022</p>
-            <p><strong>Location:</strong> Colombo, Sri Lanka</p>
-        </section>
+    <!-- Services Section (optional, you can remove if not needed) -->
+    <section id="services">
+        <div class="services-header">
+            <div class="services-subtitle">OUR SERVICES</div>
+            <h2>What We Offer</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">💊</div>
+                <h3>Prescription Upload</h3>
+                <p>Upload your prescriptions securely and easily through our platform.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏥</div>
+                <h3>Pharmacy Quotations</h3>
+                <p>Receive quotations from registered pharmacies based on your prescriptions.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📦</div>
+                <h3>Quick Response</h3>
+                <p>Fast feedback and affordable options for your medical needs.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact Details</h2>
-            <p><strong>Email:</strong> support@mediconnect.com</p>
-            <p><strong>Phone:</strong> +94 77 123 4567</p>
-            <p><strong>Address:</strong> No. 10, Galle Road, Colombo 03, Sri Lanka</p>
-        </section>
-    </main>
+    <!-- Company Info and Contact -->
+    <section id="info-section">
+        <div class="info-box">
+            <h2>About Our Company</h2>
+            <p>We aim to simplify the way users interact with pharmacies using digital technology.</p>
+            <p>Our platform ensures a safe, secure, and fast prescription handling experience.</p>
+        </div>
+        <div class="info-box">
+            <h2> Contact Us</h2>
+            <p>📧 Email: support@mediprescription.com</p>
+            <p>☎  Phone: +94 77 123 4567</p>
+            <p>📍  Location: Colombo, Sri Lanka</p>
+        </div>
+    </section>
 
     <footer>
-        &copy; 2025 MediConnect Pvt Ltd. All rights reserved.
+        &copy; <?= date("Y") ?> Medical Prescription Upload System. All rights reserved.
     </footer>
 </body>
 </html>

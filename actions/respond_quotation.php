@@ -2,38 +2,45 @@
 session_start();
 include('../includes/db.php');
 
-// Step 1: Check if user is logged in
+// ✅ Step 1: Check if user is logged in
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../index.php");
     exit();
 }
 
-// Step 2: Validate POST request
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['quotation_id']) && isset($_POST['response'])) {
-    $quotation_id = $_POST['quotation_id'];
-    $response = $_POST['response'];
+// ✅ Step 2: Handle form submission
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    // Only allow accepted or rejected
-    if ($response !== 'accepted' && $response !== 'rejected') {
-        echo "Invalid response.";
+    $quotation_id = $_POST['quotation_id'] ?? null;
+    $response = $_POST['response'] ?? null;
+
+    // ✅ Validate input
+    if (!$quotation_id || !in_array($response, ['accepted', 'rejected'])) {
+        echo "<p>⚠️ Invalid response. <a href='../users/dashboard.php'>Go back</a></p>";
         exit();
     }
 
-    // Step 3: Update quotation status
-    $update_sql = "UPDATE quotations SET status = ? WHERE id = ?";
-    $stmt = $conn->prepare($update_sql);
+    // ✅ Step 3: Update the quotation status
+    $sql = "UPDATE quotations SET status = ? WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+
+    if (!$stmt) {
+        echo "❌ Database error: " . $conn->error;
+        exit();
+    }
+
     $stmt->bind_param("si", $response, $quotation_id);
 
     if ($stmt->execute()) {
-        echo "Quotation has been " . $response . " successfully.<br>";
-        echo "<a href='../users/dashboard.php'>Return to Dashboard</a>";
+        echo "<h3>✅ Quotation has been <strong>" . htmlspecialchars($response) . "</strong> successfully.</h3>";
+        echo "<p><a href='../users/dashboard.php'>🔙 Return to Dashboard</a></p>";
     } else {
-        echo "Error updating quotation: " . $stmt->error;
+        echo "❌ Error updating quotation: " . $stmt->error;
     }
 
     $stmt->close();
 } else {
-    echo "Invalid request.";
+    echo "<p>⚠️ Invalid request method.</p>";
 }
 
 $conn->close();

@@ -1,0 +1,189 @@
+/* === Prescriptionsdashboard.css === */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('../assets/home\ 4.webp') no-repeat center center fixed;
+    background-size: cover;
+    padding: 0;
+    color: #333;
+    
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px 10px;
+    flex-wrap: wrap;
+}
+
+.dashboard-header h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 32px;
+    color: #2b6777;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.add-btn,
+.logout-btn {
+    margin: 0; /* remove auto margin */
+}
+
+
+/* Header */
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #2b6777;
+}
+
+h3 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 40px;
+    color: #2b6777;
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Add New Prescription Button */
+.add-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.add-btn:hover {
+    background-color: #218838;
+}
+
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Prescription Container */
+.prescription-box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 700px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.prescription-box:hover {
+    transform: translateY(-3px);
+}
+
+.prescription-box p {
+    margin: 12px 0;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.prescription-box img {
+    max-width: 120px;
+    height: auto;
+    margin: 10px 8px 0 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Quotation Link */
+.prescription-box a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #2b6777;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.prescription-box a:hover {
+    background-color: #20525e;
+}
+
+
+
+header {
+    background-color: #2b6777;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+}
+
+
+nav {
+    background-color: #c8d8e4;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 140px;
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2b6777;
+    font-weight: bold;
+    width: 100%;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+ text-decoration: underline;
+}
+
+
+
+
+
+footer {
+    background-color: #2b6777;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
