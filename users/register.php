@@ -21,6 +21,7 @@
         <a href="../homepage.php">Home Page</a>
     </nav>
     <main>
+        <div class="background"></div>
         <div class="form-container">
             <h2>Register</h2>
             <form action="../actions/register_action.php" method="POST">

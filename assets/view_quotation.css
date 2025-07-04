@@ -3,12 +3,56 @@ body {
     background: url('../assets/background\ 1.webp') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
-    padding: 40px 20px;
+    padding: 0;
+    background-color: #f0f0f5;
+    color: #222;
+}
+
+/* Background container */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../assets/background\ 1.webp') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(15px); /* Reduce blur from 6px to 3px for clearer image */
+    opacity: 0.9;       /* Increase opacity from 0.7 to 0.9 for a lighter effect */
+}
+
+
+.site-header {
+    background-color: #2b6777;
+    color: white;
+    padding: 20px 40px;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header-text {
+    flex: 1;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 1rem;
+    margin: 5px 0 0;
+    font-style: italic;
+}
+.logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid white;
+    margin-left: auto;
 }
 
 .container {
@@ -114,9 +158,8 @@ h2, h3 {
 header {
     background-color: #2b6777;
     color: white;
-    padding: 20px;
+    padding: 20px 0;
     text-align: center;
-    width: 100%;
 }
 
 
@@ -126,14 +169,13 @@ nav {
     display: flex;
     justify-content: center;
     gap: 140px;
-    width: 100%;
+    
+   
 }
-
 nav a {
     text-decoration: none;
     color: #2b6777;
     font-weight: bold;
-    width: 100%;
 }
 
 nav a:hover {
@@ -148,9 +190,6 @@ main {
     padding: 40px 20px;
  text-decoration: underline;
 }
-
-
-
 
 
 footer {

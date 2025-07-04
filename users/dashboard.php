@@ -17,10 +17,16 @@ $user_id = $_SESSION['user_id'];
 
 </head>
 <body>
-    <header>
+    
+<header class="site-header">
+        <div class="header-text">
         <h1>Medical Prescription Upload System</h1>
-        <p>Simple, Secure & Fast Prescription Management</p>
+        <p>Simple, Ssecure & Fast Prescription Management</p>
+         </div>
+        <img src="../assets/logo.jpg" alt="Logo" class="logo-img">
     </header>
+
+
 
     <nav>
         <a href="../users/register.php">Register</a>
@@ -30,6 +36,7 @@ $user_id = $_SESSION['user_id'];
         <a href="../homepage.php">Home Page</a>
     </nav>
     </main>
+    <div class="background"></div>
         <div class="dashboard-header">
             <h2>Welcome, User!</h2>
             <h3>Your Prescriptions</h3>

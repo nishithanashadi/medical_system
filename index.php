@@ -7,9 +7,12 @@
 </head>
 <body>
     <div>
-    <header>
+    <header class="site-header">
+        <div class="header-text">
         <h1>Medical Prescription Upload System</h1>
         <p>Simple, Ssecure & Fast Prescription Management</p>
+         </div>
+        <img src="assets/logo.jpg" alt="Logo" class="logo-img">
     </header>
     
     <nav>
@@ -21,6 +24,7 @@
     </nav>
     </div>
     <main>
+    <div class="background"></div>
     <div class="form-container">
         <h2>Login</h2>
         <form action="actions/login_action.php" method="POST">

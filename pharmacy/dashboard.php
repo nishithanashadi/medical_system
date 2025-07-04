@@ -17,9 +17,13 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'pharmacy') {
     <link rel="stylesheet" href="../assets/pharmacy-style.css">
 </head>
 <body>
-    <header>
+    
+<header class="site-header">
+        <div class="header-text">
         <h1>Medical Prescription Upload System</h1>
-        <p>Simple, Secure & Fast Prescription Management</p>
+        <p>Simple, Ssecure & Fast Prescription Management</p>
+         </div>
+        <img src="../assets/logo.jpg" alt="Logo" class="logo-img">
     </header>
 
     <nav>
@@ -34,7 +38,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['user_type'] !== 'pharmacy') {
     <div class="container">
         <header>
             <h1>Pharmacy Dashboard</h1>
-            <a href="../logout.php" class="logout-btn">Logout</a>
+            <a href="../homepage.php" class="logout-btn">Logout</a>
         </header>
 
         <section>

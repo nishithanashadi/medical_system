@@ -35,9 +35,12 @@ if ($result->num_rows > 0) {
     <link rel="stylesheet" href="../assets/quotation-style.css">
 </head>
 <body>
-    <header>
+    <header class="site-header">
+        <div class="header-text">
         <h1>Medical Prescription Upload System</h1>
-        <p>Simple, Secure & Fast Prescription Management</p>
+        <p>Simple, Ssecure & Fast Prescription Management</p>
+         </div>
+        <img src="../assets/logo.jpg" alt="Logo" class="logo-img">
     </header>
 
     <nav>

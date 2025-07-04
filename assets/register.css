@@ -8,6 +8,20 @@ body {
     color: #222;
 }
 
+/* Background container */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../assets/img1.webp') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(15px); /* Reduce blur from 6px to 3px for clearer image */
+    opacity: 0.9;       /* Increase opacity from 0.7 to 0.9 for a lighter effect */
+}
+
 .site-header {
     background-color: #2b6777;
     color: white;
@@ -55,7 +69,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 140px;
-    width: 100%;
+    
    
 }
 
