@@ -24,24 +24,24 @@
         <div class="background"></div>
         <div class="form-container">
             <h2>Register</h2>
-            <form action="../actions/register_action.php" method="POST">
+            <form action="../actions/register_action.php" method="POST" autocomplete="off">
                 <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
+                <input type="text" id="name" name="name" required autocomplete="off"><br><br>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
+                <input type="email" id="email" name="email" required autocomplete="off"><br><br>
 
                 <label>Password:</label><br>
-                <input type="password" name="password" required><br><br>
+                <input type="password" name="password" required autocomplete="off" ><br><br>
 
                 <label>Address:</label><br>
-                <textarea name="address" required></textarea><br><br>
+                <textarea name="address" required required autocomplete="off"></textarea><br><br>
 
                 <label>Contact No:</label><br>
-                <input type="text" name="contact" required><br><br>
+                <input type="text" name="contact" required required autocomplete="off"><br><br>
 
                 <label>Date of Birth:</label><br>
-                <input type="date" name="dob" required><br><br>
+                <input type="date" name="dob" required required autocomplete="off"><br><br>
 
                 <label>User Type:</label><br>
                 <select name="user_type" required>
