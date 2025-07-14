@@ -1,0 +1,157 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('../assets/img2.webp') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+    color: #222;
+}
+
+/* Background container */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../assets/img2.webp') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(15px); /* Reduce blur from 6px to 3px for clearer image */
+    opacity: 0.9;       /* Increase opacity from 0.7 to 0.9 for a lighter effect */
+}
+.site-header {
+    background-color: #2b6777;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.header-text {
+    flex: 1;
+    text-align: center;
+}
+
+.header-text h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header-text p {
+    font-size: 1rem;
+    margin: 5px 0 0;
+    font-style: italic;
+}
+.logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid white;
+    margin-left: auto;
+}
+
+.quotation-container {
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    text-align: center;
+    color: #2b6777;
+    margin-bottom: 30px;
+}
+
+.drug-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.drug-row input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button[type="button"],
+input[type="submit"] {
+    background-color: #2b6777;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: #1c4755;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #2b6777;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    background-color: #2b6777;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+
+nav {
+    background-color: #c8d8e4;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 140px;
+    
+   
+}
+nav a {
+    text-decoration: none;
+    color: #2b6777;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+ text-decoration: underline;
+}
+
+footer {
+    background-color: #2b6777;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
